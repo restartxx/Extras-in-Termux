@@ -1,1 +1,3 @@
 # Extras-in-Termux
+
+# REQUISITOS:
