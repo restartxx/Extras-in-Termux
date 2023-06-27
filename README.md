@@ -75,3 +75,43 @@ cd ubuntu-in-termux
 ```bash
   ./startubuntu.sh
 ```
+
+</details>
+
+## Installation Dependecies in Ubuntu
+
+<details>
+  <summary><strong>Update Ubuntu</strong></summary>
+
+```bash
+apt update && apt upgrade -y
+```
+
+</details>
+
+<details>
+  <summary><strong>Install Python3 & pip packegs</strong></summary>
+
+```bash
+apt install python3 && apt update && apt install python3-pip
+```
+
+</details>
+
+<details>
+  <summary><strong>Install nano</strong></summary>
+
+```bash
+apt install nano
+```
+
+</details>
+
+<details>
+  <summary><strong>Install git </strong></summary>
+
+```bash
+apt install git -y
+```
+
+</details>
