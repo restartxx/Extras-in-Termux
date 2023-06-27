@@ -203,3 +203,10 @@ python3 server.py --enable-module=chromadb
 ```
 
 </details>
+
+## Créditos
+
+Este projeto utiliza os seguintes recursos e bibliotecas de terceiros:
+
+- SillyTavern-extras (https://github.com/SillyTavern/SillyTavern-extras): A set of APIs for various SillyTavern extensions.
+- Ubuntu-in-termux (https://github.com/MFDGaming/ubuntu-in-termux): This is a script that allows you to install Ubuntu in your termux application without a rooted device.
