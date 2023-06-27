@@ -1,5 +1,17 @@
 # Extras-in-Termux
 
+### :exclamation: **IMPORTANT!**
+
+⚠️ **Disclaimer**: This repository is provided "as is," and I take no responsibility for any problems or damages that may occur when using it. It is recommended to perform proper testing and understand the risks before executing any code from this repository.
+
+⚠️ **Notice**: This repository is licensed under the [insert license name] License. Please read the license carefully before using the code from this repository.
+
+⚠️ **Notice**: This repository was developed for educational e experimental purposes. Make sure to review and adapt the code before using it in a production environment.
+
+⚠️ **Notice**: Support for this repository is limited, and I cannot guarantee immediate responses to issues or support requests. However, feel free to open issues or submit pull requests, and I will do my best to assist you.
+
+⚠️ **Notice**: Contributions are welcome!
+
 ## Installation Dependecies
 
 > **Attention!**
