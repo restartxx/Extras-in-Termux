@@ -158,8 +158,12 @@ pip install -r requirements-complete.txt
 ```
 </details>
 
-##  Fixing Host address error 
+##  Fixing Host address error
 
+<details>
+  <summary><strong>Accessing and Editing the Hosts File</strong></summary>
+
+  
 - If you want to use the chromadb module, you need to do some simple steps. Otherwise, you will receive the following error: Name or service not known 
 
 ```bash
@@ -172,7 +176,12 @@ nano /etc/hosts
 127.0.0.1 localhost
 ```
 
+</details>
+
 ##  Run chromadb module
+
+<details>
+  <summary><strong>Running chromadb module, the Smart Context</strong></summary>
 
 - Now, you should be able to run the chromadb module and others. Just use the command below and wait for the necessary requirements for chromadb to download and start it. 
 
@@ -180,3 +189,5 @@ nano /etc/hosts
 ```bash
 python3 server.py --enable-module=chromadb
 ```
+
+</details>
