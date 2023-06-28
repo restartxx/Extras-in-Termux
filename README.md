@@ -146,7 +146,7 @@ python3 server.py --enable-module=chromadb
   
 </details>
 
-## Créditos
+## Credits
 
 Este projeto utiliza os seguintes recursos e bibliotecas de terceiros:
 
