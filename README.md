@@ -19,41 +19,22 @@
 > - [Termux must be **F-Droid** Version](https://f-droid.org/en/packages/com.termux/) because Termux from Playstore no longer maintained because there are some problems with the Playstore publishing
 
   <details open>
-  <summary><strong>Update Repository & Upgrade Package</strong></summary>
+  <summary><strong>Update Repository & Upgrade Package & install git, wget and proot</strong></summary>
 
 ```bash
-pkg update && pkg upgrade
+pkg update && pkg upgrade && pkg i -y git && pkg i -y wget && pkg i proot -y
 ```
 
   </details>
-
-  <details>
-  <summary><strong>git & wget & proot</strong></summary>
 
 - Package `git` for cloning or downloading repository
-
-```bash
-pkg i -y git
-```
-
 - Package `wget` is required in Ubuntu installation
-
-```bash
-pkg I -y wget
-```
-  
 - `proot` to run Ubuntu
 
-```bash
-pkg install proot
-```
-
-  </details>
-
-## Installation Ubuntu ##
+## Ubuntu Installation and Booting ##
 
 <details open>
-  <summary><strong>Clone or Download This Repository</strong></summary>
+  <summary><strong>Clone This Ubuntu Repository</strong></summary>
 
 ```bash
 git clone https://github.com/MFDGaming/ubuntu-in-termux.git
@@ -66,26 +47,15 @@ git clone https://github.com/MFDGaming/ubuntu-in-termux.git
 
 - Move to Folder
 
-```bash
-cd ubuntu-in-termux
-```
-
 - Give execution permission
-
-```bash
-  chmod +x ubuntu.sh
-```
 
 - Execute Installer
 
-```bash
-  ./ubuntu.sh -y
-```
-
 - Now just start ubuntu
 
+
 ```bash
-  ./startubuntu.sh
+cd ubuntu-in-termux && chmod +x ubuntu.sh && ./ubuntu.sh -y && ./startubuntu.sh
 ```
 
 </details>
@@ -93,89 +63,62 @@ cd ubuntu-in-termux
 ## Installation Dependecies in Ubuntu
 
 <details>
-  <summary><strong>Update Ubuntu</strong></summary>
+  <summary><strong>Update Ubuntu and install required packages</strong></summary>
 
 ```bash
-apt update && apt upgrade -y
+apt update && apt upgrade -y && apt install python3 && apt update && apt install python3-pip && apt install nano && apt install git -y
 ```
+
+- Install `Python3` & `pip` packegs
+- Install `nano`
+- Install `git`
 
 </details>
-
-<details>
-  <summary><strong>Install Python3 & pip packegs</strong></summary>
-
-```bash
-apt install python3 && apt update && apt install python3-pip
-```
-
-</details>
-
-<details>
-  <summary><strong>Install nano</strong></summary>
-
-```bash
-apt install nano
-```
-
-</details>
-
-<details>
-  <summary><strong>Install git </strong></summary>
-
-```bash
-apt install git -y
-```
-
-</details>
-
-## Cloning SillyTavern-extras repository and making some changes 
-
-<details>
-  <summary><strong>Clone the Extras repository</strong></summary>
-
-```bash
-git clone https://github.com/Cohee1207/TavernAI-extras
-```
-
-</details>
-
-<details>
-  <summary><strong>Move to SillyTavern-extras folder</strong></summary>
-
-```bash
-cd TavernAI-extras
-```
-
-</details>
-
-<details>
-  <summary><strong>Edite requirements-complete.txt</strong></summary>
-
-```bash
-nano requirements-complete.txt
-```
-
-- Search for "torch==2.0.0+cu117" and remove the "+cu117".
-- search for "torchaudio==2.0.1+cu117" and also remove the "+cu117".
-- To save the changes made, just press the Ctrl button and the x key. Confirm the changes by pressing the y key and finally press enter.
-
-  </details>
 
 ## Install requirements-complete.txt
 
 - Depending on your device and internet speed, this process may take some time. 
 
 ```bash
-pip install -r requirements-complete.txt
+git clone && cd Extras-in-Termux && pip install -r requirements-complete.txt
 ```
 </details>
 
-##  Fixing Host address error
+## Cloning SillyTavern-extras repository 
+
+<details>
+  <summary><strong>Clone the Extras repository</strong></summary>
+
+- Now, with all the requirements already installed, choose which directory you think is most pleasant for the location of SillyTavern-extras. You can leave the current directory using the command `cd ..`
+
+```bash
+git clone https://github.com/Cohee1207/TavernAI-extras && cd TavernAI-extras
+```
+
+</details>
+
+## Running the modules
+
+- You should already be able to use almost all available modules. The only apparent exception is the module summarize which fails to initialize.
+- Only during the first time when running any module, the process will take some time until the module initialization. This is because some required packages are being downloaded, so please wait.
+- To run the modules, enter the previously cloned SillyTavern-extras directory and use the following command:
+
+```bash
+python3 server.py --enable-module=
+```
+- Just copy the command and paste it into Termux. Remember to add the name of the module you want to run at the end. For example: `python3 server.py --enable-module=chromadb`
+
+- After the process ends you will probably get something like `http://localhost:5100`
+- Copy it and paste it in space "extensions url" at SillyTavern.
+- Finally press `connect` and you will be connected to the module.
+
+</details>
+
+##  Fixing Host address error before running the chromadb module ##
 
 <details>
   <summary><strong>Accessing and Editing the Hosts File</strong></summary>
 
-  
 - If you want to use the chromadb module, you need to do some simple steps. Otherwise, you will receive the following error: Name or service not known 
 
 ```bash
@@ -195,13 +138,12 @@ nano /etc/hosts
 <details>
   <summary><strong>Running chromadb module, the Smart Context</strong></summary>
 
-- Now, you should be able to run the chromadb module and others. Just use the command below and wait for the necessary requirements for chromadb to download and start it. 
-
+- Now, you should be able to run the chromadb module and others. Just use the command below and wait for the necessary requirements for chromadb to download and start it.
 
 ```bash
 python3 server.py --enable-module=chromadb
 ```
-
+  
 </details>
 
 ## Créditos
@@ -210,3 +152,4 @@ Este projeto utiliza os seguintes recursos e bibliotecas de terceiros:
 
 - SillyTavern-extras (https://github.com/SillyTavern/SillyTavern-extras): A set of APIs for various SillyTavern extensions.
 - Ubuntu-in-termux (https://github.com/MFDGaming/ubuntu-in-termux): This is a script that allows you to install Ubuntu in your termux application without a rooted device.
+
