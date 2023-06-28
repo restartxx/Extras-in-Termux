@@ -1,0 +1,16 @@
+flask
+flask-cloudflared
+flask-cors
+flask-compress
+markdown
+Pillow
+colorama
+webuiapi
+--extra-index-url https://download.pytorch.org/whl/cu117
+accelerate
+transformers==4.28.1
+diffusers==0.16.1
+silero-api-server
+chromadb
+sentence_transformers
+edge-tts
