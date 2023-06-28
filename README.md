@@ -80,7 +80,7 @@ apt update && apt upgrade -y && apt install python3 && apt update && apt install
 - Depending on your device and internet speed, this process may take some time. 
 
 ```bash
-git clone && cd Extras-in-Termux && pip install -r requirements-complete.txt
+git clone https://github.com/restartxx/Extras-in-Termux.git && cd Extras-in-Termux && pip install -r requirements-complete.txt
 ```
 </details>
 
