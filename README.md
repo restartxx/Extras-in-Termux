@@ -92,7 +92,7 @@ git clone https://github.com/restartxx/Extras-in-Termux.git && cd Extras-in-Term
 - Now, with all the requirements already installed, choose which directory you think is most pleasant for the location of SillyTavern-extras. You can leave the current directory using the command `cd ..`
 
 ```bash
-git clone https://github.com/Cohee1207/TavernAI-extras && cd TavernAI-extras
+git clone https://github.com/Cohee1207/TavernAI-extras && cd SillyTavern-extras
 ```
 
 </details>
