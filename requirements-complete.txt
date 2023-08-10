@@ -7,6 +7,9 @@ Pillow
 colorama
 webuiapi
 --extra-index-url https://download.pytorch.org/whl/cu117
+torch==2.0.0
+torchvision==0.15.1
+torchaudio==2.0.1
 accelerate
 transformers==4.28.1
 diffusers==0.16.1
