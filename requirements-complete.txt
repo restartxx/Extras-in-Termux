@@ -17,3 +17,13 @@ silero-api-server
 chromadb
 sentence_transformers
 edge-tts
+
+vosk
+sounddevice
+openai-whisper
+
+TTS
+fastapi
+wxpython
+mecab-python3
+unidic-lite
